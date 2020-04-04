@@ -33,7 +33,7 @@ function generateVideos({ items, nextPageToken, prevPageToken }) {
             <div  class="container" >
                 <a href="https://www.youtube.com/watch?v=${item.id.videoId}">
                 <p>${item.snippet.title}<p>
-                <img src="${item.snippet.thumbnails.high.url}"></img>
+                <img src="${item.snippet.thumbnails.medium.url}"></img>
                 </a>
             </div>`;
         document.getElementById('videos').insertAdjacentHTML('afterBegin', html);
