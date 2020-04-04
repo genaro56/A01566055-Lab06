@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Lab06</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <form id="searchForm">
+    <input placeholder="type something like: happy..." type="text" name="input" id="searchInput">
+    <button type="submit">Submit</button>
+    <button type="button" onclick="clearVideos()">Clear</button>
+  </form>
+  <section class="videoContainer">
+    <div id="videos">
+    </div>
+  </section>
+  <section class="nav">
+    <button onclick="searchAPI(-1)" class="navBtns">Last page</button>
+    <button onclick="searchAPI(1)" class="navBtns">Next page</button>
+  </section>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script src="search.js" async defer></script>
+</body>
+
+</html>
