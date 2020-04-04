@@ -28,7 +28,7 @@ function generateVideos({ items, nextPageToken, prevPageToken }) {
     prevPageVal = prevPageToken;
     nextPageVal = nextPageToken;
     document.getElementById("videos").innerHTML = "";
-    items.array.forEach(item => {
+    items.forEach(item => {
         const html = `
             <div  class="container" >
                 <a href="https://www.youtube.com/watch?v=${item.id.videoId}">
