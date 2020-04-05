@@ -14,7 +14,6 @@ let createUrl = (option = 0, searchParam) => {
 
 document.getElementById('searchForm').addEventListener('submit', function (e) {
     e.preventDefault();
-    console.log(e)
     searchAPI(0);
 });
 
@@ -49,7 +48,6 @@ function searchAPI(pageOption = 0) {
             return;
         }
         res.json().then((data) => {
-            console.log(data.items);
             generateVideos(data);
             const buttons = document.getElementsByClassName('navBtns');
             buttons[0].disabled = prevPageVal === undefined;
